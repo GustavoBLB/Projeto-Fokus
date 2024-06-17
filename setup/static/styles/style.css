@@ -1,21 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Comme:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Poppins",sans-serif;
+    font-family: "Comme", sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 body {
     width:100%;
     min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color: #dfdfdf;
 
 }
 
+/* CABEÇALHO */
+
+.cabecalho{
+  display: flex;
+  height: 80px;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 100px;
+  background-color: white;
+
+  position: fixed;
+  z-index: 2;
+}
+
+.cabecalho_logo{
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  gap: 10px;
+}
+
+.cabecalho_logo_imagem{
+width: 50px;
+height: 50px;
+}
+
+.cabecalho_logo_imagem_escrita{
+  width: 200px;
+height: 50px
+}
+
+
+.cabecalho_lista{
+  display: flex;
+  gap: 30px;
+}
+
+.cabecalho__lista__item{
+  list-style: none;
+}
+
+.cabecalho__lista__link{
+  transition: 0.2s;
+  text-decoration: none;
+  color: black;
+}
+
+.cabecalho__lista__link:hover{
+  color: #00EAF9;
+}
+
+.hr_cabecalho{
+  width: 100%; 
+  height: 3px; 
+  background: linear-gradient(to right, #ff7b00 30%, #00EAF9 30%); /* Gradiente de fundo */
+  padding-top: 83px;
+
+  position: fixed;
+  z-index: 1;
+}
+
+/* SOBRE */
+
+.sobre{
+  padding-top: 90px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  height: 100vh;
+  align-items: center;
+
+}
+
+.sobre_imagem{
+  height: 400px;
+  width: 400px;
+  border: #ff7b00 solid;
+  border-radius: 100px 10px;
+  
+}
+
+.sobre_texto{
+  width: 30%;
+  display: flex;
+  flex-direction: column;  
+  gap: 30px;  
+}
+
+.sobre_texto_titulo{
+  font-size: 47px;
+  align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.sobre_texto_paragrafo{
+  font-size: 22px;
+  text-align: justify;
+}
+
+/* CACHORROS */
+
+.cachorros{
+  background-color: #f0f0f0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap:40px;
+}
+
+.cachorros_titulo{
+  align-self: center;
+  font-size: 36px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cachorros_sessao{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cachorros_sessao_card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+}
+
+.cachorros_sessao_card_imagem{
+  width: 200px;
+  border-radius: 50%;
+  border: #ff7b00 ;
+}
+.cachorros_sessao_card_nome{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+
+.cachorros_botao{
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  padding: 0.5rem 1rem;    
+  margin: auto;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  transition: all 0.7s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  height: 50px;
+  width: 50%; 
+  max-width: 400px; 
+  min-width: 100px;
+}
+
+.cachorros_botao:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff7b00;
+  z-index: -2;
+}
+
+.cachorros_botao:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #aa5200;
+  transition: all 0.7s;
+  z-index: -1;
+}
+
+.cachorros_botao:hover {
+  color: #fff;
+}
+
+.cachorros_botao:hover:before {
+  width: 100%;
+}
+
+
 .container{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
   background-color: #fafafa;
   border-radius: 14px;
   margin: 14px;
@@ -25,7 +229,7 @@ body {
   overflow: hidden;
 }
 
-.header{
+.titulo_form{
   background: linear-gradient(120deg, #00D5FF 0%, #00D5FF 100%);
   padding: 24px;
   text-align: center;
@@ -81,4 +285,62 @@ body {
 .form-content.error a{
   color: #ff3b25;
   visibility: visible;
+}
+
+.form_pix{
+  padding: 10px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+  transition: 1s;
+  animation: anim 2s forwards;
+                animation-delay: 2s;
+}
+
+.form_pix_titulo{
+  font-size: 20px;
+}
+
+.form_pix_texto{
+  font-size: 16px;
+}
+
+/* FOOTER */
+
+.rodape{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  padding-right: 50px;
+}
+
+.rodape_contato{
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+
+.rodape_contato_link{
+  color: black;
+}
+
+.rodape_contato_escrita{
+  color: black;
+  font-weight: bold
+}
+
+.rodape_logo{
+  width: 170px;
+  height: 170px;
+}
+
+.rodape_info{
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }

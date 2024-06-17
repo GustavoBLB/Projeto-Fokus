@@ -6,11 +6,33 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Cachorros</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+    <link rel="stylesheet" href="{% static '/styles/cachorro_style.css' %}">
     
 </head>
 <body>
-    <section>
+
+    <header class = "cabecalho">
+        <div class="cabecalho_logo">
+            <a href="{% url 'home' %}">
+            <img class = "cabecalho_logo_imagem" src="{% static 'assets/Cachorro Logo Ozanimais.jpg'%}">
+            
+            <img class = "cabecalho_logo_imagem_escrita" src="{% static 'assets/Logo Ozanimais.jpg'%}">
+            </a>
+        </div>
+    
+        <nav>
+            <ul class="cabecalho_lista">
+                <li class="cabecalho__lista__item"><a class="cabecalho__lista__link" href="{% url 'home' %}">Voltar</a></li>
+
+            </ul>
+        </nav>
+            
+        
+      </header>
+      <div class="hr_cabecalho"></div>
+
+      
+    <section class = "todos_cachorro">
         <div class="container">
             <div class="imagem">
                 <img src="{% static '/assets/matteo.jpg '%}">
@@ -29,6 +51,9 @@
         </div>
         <div class="container invertido">
 
+                <img src="{% static '/assets/matteo.jpg '%}">
+
+
             <div class="sobre_cachorro">
                 <h1 class="sobre_cachorro_titulo">Ma<span>tteo</span></h1>
                 <p class ="sobre_cachorro_paragrafo">Matteo acabou sendo deixado com um rapaz que não tinha recursos para cuidar dele
@@ -38,9 +63,7 @@
                     Tentei conversar com responsável a melhorar a situação, mas sem sucesso. Quando a pessoa
                     que o deixou se mudou, Matteo ficou sozinho. Foi então que decidi resgatá-lo.</p>
             </div>
-            <div class="imagem">
-                <img src="{% static '/assets/matteo.jpg '%}">
-            </div>
+            
         </div>
 
         <div class="container">
@@ -59,6 +82,10 @@
         </div>
 
         <div class="container invertido">
+
+            <div class="imagem">
+                <img src="{% static '/assets/matteo.jpg '%}">
+            </div>
 
             <div class="sobre_cachorro">
                 <h1 class="sobre_cachorro_titulo">Ro<span>meu</span></h1>
@@ -69,9 +96,7 @@
                     Tentei conversar com responsável a melhorar a situação, mas sem sucesso. Quando a pessoa
                     que o deixou se mudou, Matteo ficou sozinho. Foi então que decidi resgatá-lo.</p>
             </div>
-            <div class="imagem">
-                <img src="{% static '/assets/matteo.jpg '%}">
-            </div>
+            
         </div>
 
         <div class="container">
@@ -91,6 +116,10 @@
 
         <div class="container invertido">
 
+            <div class="imagem">
+                <img src="{% static '/assets/matteo.jpg '%}">
+            </div>
+
             <div class="sobre_cachorro">
                 <h1 class="sobre_cachorro_titulo">Ma<span>tteo</span></h1>
                 <p class ="sobre_cachorro_paragrafo">Matteo acabou sendo deixado com um rapaz que não tinha recursos para cuidar dele
@@ -100,14 +129,27 @@
                     Tentei conversar com responsável a melhorar a situação, mas sem sucesso. Quando a pessoa
                     que o deixou se mudou, Matteo ficou sozinho. Foi então que decidi resgatá-lo.</p>
             </div>
-            <div class="imagem">
-                <img src="{% static '/assets/matteo.jpg '%}">
+            
+        </div>
+
+        <footer class = "rodape">
+        
+            <div class = "rodape_contato">
+                <a class = "rodape_contato_link" href="mailto:ozanimais.ong@gmail.com"><span class = "rodape_contato_escrita">E-mail:</span> ozanimais.ong@gmail.com</a>
+                <a class = "rodape_contato_link" href="https://www.instagram.com/ong.ozanimais/?hl=pt"><span class = "rodape_contato_escrita">Facebook:</span> ONG Ozanimais</a>
+                <a class = "rodape_contato_link" href="https://www.instagram.com/ong.ozanimais/?hl=pt"><span class = "rodape_contato_escrita">Instagram:</span> ong.ozanimais</a>
             </div>
-        </div>
+    
+            <img src= "{% static 'assets/cachorropng.png'%}" alt="Logo_Ozanimais" class="rodape_logo">
+    
+            <div class = "rodape_info">
+                <span>CNPJ: 184.975.447-06</span>
+                <span>TEL: (21) 99696-7377</span>
+            </div>
+    
+        </footer>
 
-
-
-        </div>
+        
     </section>
     
 </body>
