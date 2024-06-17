@@ -24,8 +24,8 @@
     <nav>
         <ul class="cabecalho_lista">
             <li class="cabecalho__lista__item"><a class="cabecalho__lista__link" href="#">Sobre mim</a></li>
-            <li class="cabecalho__lista__item"><a class="cabecalho__lista__link" href="#">Amicães</a></li>
-            <li class="cabecalho__lista__item"><a class="cabecalho__lista__link" href="#">Doacao</a></li>
+            <li class="cabecalho__lista__item"><a class="cabecalho__lista__link" href="#cachorros">Amicães</a></li>
+            <li class="cabecalho__lista__item"><a class="cabecalho__lista__link" href="#form">Doacao</a></li>
         </ul>
     </nav>
         
@@ -39,16 +39,13 @@
 
     <div class ="sobre_texto">
         <h1 class ="sobre_texto_titulo">Quem Sou Eu?!</h1>
-        <p class ="sobre_texto_paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eaque rerum eos. Maiores 
-            neque at tempora modi ea quae. Officiis hic, facilis ducimus tempora quae veritatis nesciunt nemo quis? Tempore!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eaque rerum eos. Maiores 
-            neque at tempora modi ea quae. Officiis hic, facilis ducimus tempora quae veritatis nesciunt nemo quis? Tempore!</p>
+        <p class ="sobre_texto_paragrafo">Desde pequena, minha paixão por cachorros me levou a transformar minha casa em um refúgio para eles. Assim nasceu a ONG "OZANIMAIS". Resgatamos, cuidamos e encontramos lares amorosos para cada um. Com o apoio da comunidade, realizamos eventos de adoção e campanhas de conscientização. Cada cauda abanando é uma vitória que nos enche de esperança.</p>
     </div>
     
 
   </section>
 
-  <section class = "cachorros">
+  <section id = "cachorros">
     <h1 class = "cachorros_titulo">alguns dos meus cachorros</h1>
 
     <div class = "cachorros_sessao">
@@ -75,12 +72,13 @@
 
   </section>
 
+  <div class = "centralizar">
     <div class="container">
         <section class="titulo_form">
           <h2>Pagina de Doação </h2>
         </section>
     
-        <form id="form" class="form" method="post" action="{%url 'listagem_doadores'%}" >
+        <form id="form" class="form" method="post"  >
           {% csrf_token %}
           <div class="form-content">
             <label for="username">Nome</label>
@@ -120,6 +118,8 @@
           <button class = "enviar-mostrar" type="submit">Enviar</button>
           
         </form>
+
+      </div>
         
     
       </div>
@@ -137,6 +137,7 @@
         <div class = "rodape_info">
             <span>CNPJ: 184.975.447-06</span>
             <span>TEL: (21) 99696-7377</span>
+            <a href="#">Acesso restrito</a>
         </div>
 
     </footer>
