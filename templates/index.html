@@ -51,19 +51,19 @@
     <div class = "cachorros_sessao">
         <div class = "cachorros_sessao_card">
             <img src = "{% static 'assets/matteo.jpg'%}" alt="Foto_Romeo" class = "cachorros_sessao_card_imagem"><img>
-            <h1 class = "cachorros_sessao_card_nome">romeo</h1>
+            <h1 class = "cachorros_sessao_card_nome">Romeu</h1>
         </div>
         <div class = "cachorros_sessao_card">
-            <img src = "{% static 'assets/matteo.jpg'%}" alt="Foto_Romeo" class = "cachorros_sessao_card_imagem"><img>
-            <h1 class = "cachorros_sessao_card_nome">romeo</h1>
+            <img src = "{% static 'assets/cachorro 2.jpg'%}" alt="Foto_Romeo" class = "cachorros_sessao_card_imagem"><img>
+            <h1 class = "cachorros_sessao_card_nome">Zarinha</h1>
         </div>
         <div class = "cachorros_sessao_card">
-            <img src = "{% static 'assets/matteo.jpg'%}" alt="Foto_Romeo" class = "cachorros_sessao_card_imagem"><img>
-            <h1 class = "cachorros_sessao_card_nome">romeo</h1>
+            <img src = "{% static 'assets/cachorro 3.jpg'%}" alt="Foto_Romeo" class = "cachorros_sessao_card_imagem"><img>
+            <h1 class = "cachorros_sessao_card_nome">Rex</h1>
         </div>
         <div class = "cachorros_sessao_card">
-            <img src = "{% static 'assets/matteo.jpg'%}" alt="Foto_Romeo" class = "cachorros_sessao_card_imagem"><img>
-            <h1 class = "cachorros_sessao_card_nome">romeo</h1>
+            <img src = "{% static 'assets/cachorro 4.jpg'%}" alt="Foto_Romeo" class = "cachorros_sessao_card_imagem"><img>
+            <h1 class = "cachorros_sessao_card_nome">Floquinho</h1>
         </div>
 
     </div>
@@ -78,14 +78,14 @@
           <h2>Pagina de Doação </h2>
         </section>
     
-        <form id="form" class="form" method="post"  >
+        <form id="form" class="form" method="post" action="{% url 'home' %}" >
           {% csrf_token %}
           <div class="form-content">
-            <label for="username">Nome</label>
+            <label for="nome">Nome</label>
             <input
               name = "nome"
               type="text"
-              id="username"
+              id="nome"
               placeholder="Digite o seu nome..."
             />
           </div>
@@ -104,7 +104,7 @@
             <label for="telefone">Telefone</label>
             <input
               name="telefone"
-              type="telefone"
+              type="text"
               id="telefone"
               placeholder="Digite o seu telefone..."
             />
@@ -112,7 +112,7 @@
           
           <div class = 'form_pix'>
             <h1 class = "form_pix_titulo">Nossa chave pix:</h1>
-            <span class = "form_pix_texto" >18497544706</span>
+            <span class = "form_pix_texto" >42.475.570/0001-88</span>
           </div>
     
           <button class = "enviar-mostrar" type="submit">Enviar</button>
@@ -135,9 +135,9 @@
         <img src= "{% static 'assets/cachorropng.png'%}" alt="Logo_Ozanimais" class="rodape_logo">
 
         <div class = "rodape_info">
-            <span>CNPJ: 184.975.447-06</span>
+            <span>CNPJ: 42.475.570/0001-88</span>
             <span>TEL: (21) 99696-7377</span>
-            <a href="#">Acesso restrito</a>
+            <a href="http://127.0.0.1:8000/admin/">Acesso restrito</a>
         </div>
 
     </footer>

@@ -273,7 +273,7 @@ height: 50px
 }
 
 .form button{
-  background-color: #FF6756;
+  background-color: #ff7b00;
   color: #FFF;
   width: 100%;
   border-radius: 14px;
@@ -282,6 +282,11 @@ height: 50px
   font-size: 16px;
   cursor: pointer;
   margin-top: 14px;
+  transition: background-color 0.7s ease;
+}
+
+.form button:hover{
+  background-color: #aa5200;
 }
 
 .form-content.error input{
@@ -299,9 +304,8 @@ height: 50px
   align-items: center;
   justify-content: center;
   gap:20px;
-  transition: 1s;
-  animation: anim 2s forwards;
-                animation-delay: 2s;
+  transition: opacity 0.3s ease, display 0s ease 0.3s;
+
 }
 
 .form_pix_titulo{
